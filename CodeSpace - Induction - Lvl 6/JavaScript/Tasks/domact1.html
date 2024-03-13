@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Activity 1 - Vanila JS DOM</title>
+        <style>
+            #text {
+              border: 1px solid black;
+              margin: 5px;
+            } 
+        </style> <!--Setting style for function to change.-->
+    </head>
+
+    <body>
+        <div id="text">
+            <p>Vanilla JS DOM</p>
+        </div>
+        <button id="jsstyle" onclick="js_style()">Style</button> <!--Runs function when button is pressed.-->
+        <script>
+            function js_style() { //Creates function
+                let x = document.getElementById("text").querySelectorAll("p"); //Selecting areas to change the style of.
+                for (let i = 0; i < x.length; i++) { //For loop to allow us to change styles.
+                    x[i].style.backgroundColor = "green"; //Changes background colour to green.
+                    x[i].style.color = "yellow"; //Changes text colour to yellow.
+                }
+            }
+        </script>
+    </body>
+</html>
